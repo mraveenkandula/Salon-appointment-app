@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Bella Beauty Clinic</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-spa"></i>
+                <span>Bella Beauty</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="appointment.html" class="nav-link appointment-btn active">Book Appointment</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Book Your Appointment</h1>
+            <p>Schedule your beauty experience with us. Choose your preferred service, date, and time.</p>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-container">
+                <div class="booking-form-container">
+                    <h2>Appointment Details</h2>
+                    <form id="appointmentForm" class="appointment-form">
+                        <!-- Step 1: Service Selection -->
+                        <div class="form-step active" id="step1">
+                            <h3><span class="step-number">1</span> Select Service</h3>
+                            <div class="service-categories">
+                                <div class="category-group">
+                                    <h4><i class="fas fa-user-check"></i> Facial Treatments</h4>
+                                    <div class="service-options">
+                                        <label class="service-option">
+                                            <input type="radio" name="service" value="Classic European Facial - $80">
+                                            <div class="option-content">
+                                                <span class="service-name">Classic European Facial</span>
+                                                <span class="service-price">$80</span>
+                                                <span class="service-duration">60 minutes</span>
+                                            </div>
+                                        </label>
+                                        <label class="service-option">
+                                            <input type="radio" name="service" value="Anti-Aging Facial - $120">
+                                            <div class="option-content">
+                                                <span class="service-name">Anti-Aging Facial</span>
+                                                <span class="service-price">$120</span>
+                                                <span class="service-duration">75 minutes</span>
+                                            </div>
+                                        </label>
+                                        <label class="service-option">
+                                            <input type="radio" name="service" value="Hydrating Glow Facial - $95">
+                                            <div class="option-content">
+                                                <span class="service-name">Hydrating Glow Facial</span>
+                                                <span class="service-price">$95</span>
+                                                <span class="service-duration">60 minutes</span>
+                                            </div>
+                                        </label>
+                                        <label class="service-option">
+                                            <input type="radio" name="service" value="Acne Treatment Facial - $110">
+                                            <div class="option-content">
+                                                <span class="service-name">Acne Treatment Facial</span>
+                                                <span class="service-price">$110</span>
+                                                <span class="service-duration">90 minutes</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="category-group">
+                                    <h4><i class="fas fa-cut"></i> Hair Services</h4>
+                                    <div class="service-options">
+                                        <label class="service-option">
+                                            <input type="radio" name="service" value="Hair Cut & Style - $65">
+                                            <div class="option-content">
+                                                <span class="service-name">Hair Cut & Style</span>
+                                                <span class="service-price">$65</span>
+                                                <span class="service-duration">90 minutes</span>
+                                            </div>
+                                        </label>
+                                        <label class="service-option">
+                                            <input type="radio" name="service" value="Hair Color - Full - $150">
+                                            <div class="option-content">
+                                                <span class="service-name">Hair Color - Full</span>
+                                                <span class="service-price">$150</span>
+                                                <span class="service-duration">3 hours</span>
+                                            </div>
+                                        </label>
+                                        <label class="service-option">
+                                            <input type="radio" name="service" value="Highlights & Lowlights - $120">
+                                            <div class="option-content">
+                                                <span class="service-name">Highlights & Lowlights</span>
+                                                <span class="service-price">$120</span>
+                                                <span class="service-duration">2.5 hours</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="category-group">
+                                    <h4><i class="fas fa-hand-sparkles"></i> Nail Care</h4>
+                                    <div class="service-options">
+                                        <label class="service-option">
+                                            <input type="radio" name="service" value="Classic Manicure - $35">
+                                            <div class="option-content">
+                                                <span class="service-name">Classic Manicure</span>
+                                                <span class="service-price">$35</span>
+                                                <span class="service-duration">45 minutes</span>
+                                            </div>
+                                        </label>
+                                        <label class="service-option">
+                                            <input type="radio" name="service" value="Gel Manicure - $55">
+                                            <div class="option-content">
+                                                <span class="service-name">Gel Manicure</span>
+                                                <span class="service-price">$55</span>
+                                                <span class="service-duration">60 minutes</span>
+                                            </div>
+                                        </label>
+                                        <label class="service-option">
+                                            <input type="radio" name="service" value="Spa Pedicure - $50">
+                                            <div class="option-content">
+                                                <span class="service-name">Spa Pedicure</span>
+                                                <span class="service-price">$50</span>
+                                                <span class="service-duration">60 minutes</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="category-group">
+                                    <h4><i class="fas fa-spa"></i> Spa Treatments</h4>
+                                    <div class="service-options">
+                                        <label class="service-option">
+                                            <input type="radio" name="service" value="Swedish Massage - $90">
+                                            <div class="option-content">
+                                                <span class="service-name">Swedish Massage</span>
+                                                <span class="service-price">$90</span>
+                                                <span class="service-duration">60 minutes</span>
+                                            </div>
+                                        </label>
+                                        <label class="service-option">
+                                            <input type="radio" name="service" value="Deep Tissue Massage - $110">
+                                            <div class="option-content">
+                                                <span class="service-name">Deep Tissue Massage</span>
+                                                <span class="service-price">$110</span>
+                                                <span class="service-duration">75 minutes</span>
+                                            </div>
+                                        </label>
+                                        <label class="service-option">
+                                            <input type="radio" name="service" value="Hot Stone Therapy - $130">
+                                            <div class="option-content">
+                                                <span class="service-name">Hot Stone Therapy</span>
+                                                <span class="service-price">$130</span>
+                                                <span class="service-duration">90 minutes</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="category-group">
+                                    <h4><i class="fas fa-gift"></i> Popular Packages</h4>
+                                    <div class="service-options">
+                                        <label class="service-option">
+                                            <input type="radio" name="service" value="The Complete Glow Package - $125">
+                                            <div class="option-content">
+                                                <span class="service-name">The Complete Glow Package</span>
+                                                <span class="service-price">$125</span>
+                                                <span class="service-duration">3 hours</span>
+                                            </div>
+                                        </label>
+                                        <label class="service-option">
+                                            <input type="radio" name="service" value="The Spa Day Package - $199">
+                                            <div class="option-content">
+                                                <span class="service-name">The Spa Day Package</span>
+                                                <span class="service-price">$199</span>
+                                                <span class="service-duration">4 hours</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-primary next-step" onclick="nextStep()">Next Step</button>
+                        </div>
+
+                        <!-- Step 2: Date & Time Selection -->
+                        <div class="form-step" id="step2">
+                            <h3><span class="step-number">2</span> Select Date & Time</h3>
+                            <div class="datetime-selection">
+                                <div class="date-selection">
+                                    <label for="appointmentDate">Preferred Date:</label>
+                                    <input type="date" id="appointmentDate" name="appointmentDate" required>
+                                </div>
+                                <div class="time-selection">
+                                    <label>Available Time Slots:</label>
+                                    <div class="time-slots">
+                                        <label class="time-slot">
+                                            <input type="radio" name="appointmentTime" value="9:00 AM">
+                                            <span>9:00 AM</span>
+                                        </label>
+                                        <label class="time-slot">
+                                            <input type="radio" name="appointmentTime" value="10:30 AM">
+                                            <span>10:30 AM</span>
+                                        </label>
+                                        <label class="time-slot">
+                                            <input type="radio" name="appointmentTime" value="12:00 PM">
+                                            <span>12:00 PM</span>
+                                        </label>
+                                        <label class="time-slot">
+                                            <input type="radio" name="appointmentTime" value="1:30 PM">
+                                            <span>1:30 PM</span>
+                                        </label>
+                                        <label class="time-slot">
+                                            <input type="radio" name="appointmentTime" value="3:00 PM">
+                                            <span>3:00 PM</span>
+                                        </label>
+                                        <label class="time-slot">
+                                            <input type="radio" name="appointmentTime" value="4:30 PM">
+                                            <span>4:30 PM</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step-buttons">
+                                <button type="button" class="btn-secondary prev-step" onclick="prevStep()">Previous</button>
+                                <button type="button" class="btn-primary next-step" onclick="nextStep()">Next Step</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Personal Information -->
+                        <div class="form-step" id="step3">
+                            <h3><span class="step-number">3</span> Your Information</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="specialRequests">Special Requests or Notes</label>
+                                <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Any allergies, preferences, or special requests..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="firstTime" value="yes">
+                                    <span class="checkmark"></span>
+                                    This is my first time visiting Bella Beauty
+                                </label>
+                            </div>
+                            <div class="step-buttons">
+                                <button type="button" class="btn-secondary prev-step" onclick="prevStep()">Previous</button>
+                                <button type="button" class="btn-primary next-step" onclick="nextStep()">Review Booking</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Confirmation -->
+                        <div class="form-step" id="step4">
+                            <h3><span class="step-number">4</span> Confirm Your Appointment</h3>
+                            <div class="booking-summary">
+                                <div class="summary-section">
+                                    <h4>Service Details</h4>
+                                    <div id="selectedService" class="summary-item"></div>
+                                </div>
+                                <div class="summary-section">
+                                    <h4>Date & Time</h4>
+                                    <div id="selectedDateTime" class="summary-item"></div>
+                                </div>
+                                <div class="summary-section">
+                                    <h4>Client Information</h4>
+                                    <div id="clientInfo" class="summary-item"></div>
+                                </div>
+                                <div class="total-section">
+                                    <div class="total-price">
+                                        <span>Total: </span>
+                                        <span id="totalAmount">$0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="policy-agreement">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="agreePolicy" value="yes" required>
+                                    <span class="checkmark"></span>
+                                    I agree to the <a href="#">cancellation policy</a> and <a href="#">terms of service</a>
+                                </label>
+                            </div>
+                            <div class="step-buttons">
+                                <button type="button" class="btn-secondary prev-step" onclick="prevStep()">Previous</button>
+                                <button type="submit" class="btn-primary">Confirm Appointment</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Booking Info Sidebar -->
+                <div class="booking-info">
+                    <div class="info-card">
+                        <h3>Booking Information</h3>
+                        <div class="info-item">
+                            <i class="fas fa-calendar-check"></i>
+                            <div>
+                                <h4>Easy Scheduling</h4>
+                                <p>Book online 24/7 or call us during business hours</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Punctuality</h4>
+                                <p>Please arrive 10 minutes early for your appointment</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-credit-card"></i>
+                            <div>
+                                <h4>Payment Options</h4>
+                                <p>We accept cash, credit cards, and mobile payments</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-ban"></i>
+                            <div>
+                                <h4>Cancellation Policy</h4>
+                                <p>24-hour notice required for cancellations</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>Need Help?</h3>
+                        <p>Have questions about our services or need assistance with booking?</p>
+                        <div class="contact-options">
+                            <a href="tel:555-123-4567" class="contact-option">
+                                <i class="fas fa-phone"></i>
+                                <span>(555) 123-4567</span>
+                            </a>
+                            <a href="mailto:info@bellabeauty.com" class="contact-option">
+                                <i class="fas fa-envelope"></i>
+                                <span>info@bellabeauty.com</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-spa"></i>
+                        <span>Bella Beauty</span>
+                    </div>
+                    <p>Your trusted partner in beauty and wellness. Creating beautiful experiences for women in a safe, professional environment.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="appointment.html">Book Appointment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#facial">Facial Treatments</a></li>
+                        <li><a href="services.html#hair">Hair Styling</a></li>
+                        <li><a href="services.html#nails">Nail Care</a></li>
+                        <li><a href="services.html#spa">Spa Treatments</a></li>
+                        <li><a href="services.html#makeup">Makeup Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Beauty Lane, Wellness City, WC 12345</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@bellabeauty.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Mon-Sat: 9AM-7PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bella Beauty Clinic. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
